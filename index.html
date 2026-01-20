@@ -1,44 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Mom Circle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    ul {
-      list-style-type: none;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      width: 200px;
-      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
     }
 
-    li a {
-      display: block;
-      color: black;
-      padding: 8px 16px;
-      text-decoration: none;
+    body {
+      line-height: 1.6;
+      background-color: #ffffff;
+      color: #333;
     }
 
-    li a:hover {
-      background-color: #555555;
+    /* NAVBAR */
+    nav {
+      background: #555;
+      padding: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
       color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background: #f1f1f1;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      border: none;
+      background: #555;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .hero button:hover {
+      background: #333;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding-top: 30px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #555;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>There is hope for you MOM</h1>
-  <p>Mom Circle is about stewarding motherhood.</p>
+  <!-- NAVBAR -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <h2>Gray Vertical Navbar</h2>
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <h1>There Is Hope for You, MOM</h1>
+    <p>Mom Circle is about stewarding motherhood with love and purpose.</p>
+    <br>
+    <button onclick="showMessage()">Join the Circle</button>
+  </section>
 
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Mom Circle</h2>
+    <p>
+      Mom Circle exists to support, guide, and empower mothers through
+      mentorship, community, and faith-based encouragement.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+
+    <div class="services">
+      <div class="card">
+        <h3>Mentorship</h3>
+        <p>Guidance and emotional support for mothers.</p>
+      </div>
+
+      <div class="card">
+        <h3>Community</h3>
+        <p>A safe space to share experiences and grow together.</p>
+      </div>
+
+      <div class="card">
+        <h3>Resources</h3>
+        <p>Helpful materials for parenting and self-care.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@momcircle.com</p>
+    <p>Phone: +267 71126219</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Mom Circle. All rights reserved.</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function showMessage() {
+      alert("Welcome to Mom Circle! 💕");
+    }
+  </script>
 
 </body>
 </html>
